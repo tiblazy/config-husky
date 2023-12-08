@@ -1,5 +1,14 @@
 import type { Config } from 'tailwindcss'
 
+// function withOpacity(variableName) {
+//   return ({ opacity }) => {
+//     if (opacity !== undefined) {
+//       return `rgba(var(${variableName}), ${opacity})`;
+//     }
+//     return `rgb(var(${variableName}))`;
+//   };
+// }
+
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,7 +16,9 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      textColor: {}
+    }
   },
   plugins: []
 }

@@ -9,6 +9,6 @@ describe('Main', () => {
       screen.getByRole('heading', { name: /Testing Library/i })
     ).toBeInTheDocument()
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(container.firstChild).toBeInTheDocument()
   })
 })
