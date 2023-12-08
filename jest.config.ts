@@ -5,7 +5,11 @@ export default async (): Promise<Config> => ({
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   collectCoverage: true,
   coverageProvider: 'v8',
-  collectCoverageFrom: ['src/__tests__/**/*.spec.ts(x)?', '!src/apo/**'],
+  collectCoverageFrom: [
+    'src/__tests__/**/*.spec.ts(x)?',
+    '!src/apo/**',
+    '!src/stories/**'
+  ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   modulePaths: ['<rootDir>/src/'],
   transform: {
